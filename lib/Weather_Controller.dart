@@ -8,7 +8,7 @@ class WeatherController extends GetxController {
   var weatherForecast = WeatherModel().obs;
   var isLoading = true.obs;
 
-  final String apiKey = '07e3243c2e3020426c4a3cf53d269a65';
+  final String apiKey = 'Your_Api_key';
   final String baseUrl = 'https://api.openweathermap.org/data/2.5';
 
   Future<void> getRealTimeWeatherByLocation(double lat, double lon) async {

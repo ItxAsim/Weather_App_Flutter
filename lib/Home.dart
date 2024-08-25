@@ -48,7 +48,15 @@ class WeatherApp extends StatelessWidget {
         ),
         body: Obx(() {
           if (weatherController.isLoading.value) {
-            return Center(child: CircularProgressIndicator());
+            return Stack(children:[
+              Positioned.fill(
+                child: Image.asset(
+                  'assets/Image/bg.jpg',
+                  fit: BoxFit.cover,
+
+                ),
+              ),
+              Center(child: CircularProgressIndicator(color: Colors.white,),)]);
           } else {
             return Stack(
               children:[
